@@ -9,7 +9,7 @@ def index(request):
 
 def about(request):
     title = 'Add task'
-    tasks = Task.objects.all()
+    tasks = Task.objects.all().order_by('-text')
     context = {
         'tasks': tasks,
         'title': title,
