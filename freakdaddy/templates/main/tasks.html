@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}Tasks{% endblock %}
+{% block content %}
+<div style='position: absolute; left: 39%; top: 10%;'>
+{% if tasks %}
+  {% for el in tasks %}
+  <div class='alert bg-secondary mt-2  text-center rounded' style='width: 400px;'>
+      <h3>{{ el.title }}</h3>
+      <p>{{ el.text }}</p>
+  </div>
+  {% endfor %}
+  {% else %}
+  <p>Задач нет</p>
+  {% endif %}
+</div>
+{% endblock %}
